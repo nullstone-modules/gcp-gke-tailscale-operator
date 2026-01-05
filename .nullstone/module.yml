@@ -1,0 +1,14 @@
+org_name: nullstone
+name: gcp-gke-tailscale-operator
+friendly_name: GKE Tailscale Operator
+description: Installs the Kubernetes Tailscale Operator on a GKE cluster
+category: block
+subcategory: ""
+provider_types:
+    - gcp
+platform: tailscale
+subplatform: gke
+type: ""
+appCategories: []
+is_public: true
+tool_name: opentofu
