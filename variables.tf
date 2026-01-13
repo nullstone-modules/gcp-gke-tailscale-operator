@@ -16,3 +16,9 @@ Create the client with Devices Core, Auth Keys, Services write scopes, and the t
 See https://tailscale.com/kb/1236/kubernetes-operator#prerequisites
 EOF
 }
+
+variable "tailnet_dns_name" {
+  type        = string
+  default     = ""
+  description = "Enter the Tailnet DNS name listed in the DNS tab of your Tailscale admin console."
+}
