@@ -14,6 +14,10 @@ locals {
       hostname    = "${local.stack_name}-${local.env_name}-k8s-operator"
       defaultTags = ["tag:k8s-operator"]
     }
+
+    proxyConfig = {
+      defaultTags = "tag:${local.stack_name}-${local.env_name}"
+    }
   }
 }
 
