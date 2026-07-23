@@ -7,7 +7,7 @@ resource "kubernetes_namespace" "tailscale" {
 locals {
   tailscale_config = {
     oauth = {
-      clientId = var.oauth_client_id
+      clientId = local.oauth_client_id
     }
 
     operatorConfig = {
@@ -36,7 +36,7 @@ resource "helm_release" "tailscale" {
   set_sensitive = [
     {
       name  = "oauth.clientSecret"
-      value = var.oauth_client_secret
+      value = local.oauth_client_secret
     }
   ]
 }
